@@ -1,1 +1,4 @@
-.cls
+*.cls
+.idea
+*.iml
+*.zip

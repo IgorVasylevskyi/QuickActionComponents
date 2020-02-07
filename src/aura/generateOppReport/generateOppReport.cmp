@@ -1,0 +1,22 @@
+<!-- -->
+<aura:component description="generateOppReport" implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" controller="AccountController">
+
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="hasNumber" type="boolean" default="false"/>
+
+    <aura:if isTrue="{!v.hasNumber}">
+
+        <lightning:input type="radio" label="A" value="1"/>
+        <lightning:input type="radio" label="B" value="2"/>
+        <lightning:input type="radio" label="C" value="3"/>
+
+        <aura:set attribute="else">
+            <c:fillInvoiceNumber/>
+            You came from Account
+        </aura:set>
+    </aura:if>
+
+
+
+</aura:component>
